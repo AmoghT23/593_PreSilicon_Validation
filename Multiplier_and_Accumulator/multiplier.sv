@@ -31,15 +31,15 @@ module ece593w26_mul(input logic clk, rst,
         
         SHIFT: begin
           if (count == 0) begin
-            next_state = ADD;  
+            next_state <= ADD;  
           end 
           else if ({q[0], q_1} == 2'b00 || {q[0], q_1} == 2'b11) begin
             {a, q, q_1} <= {a, q, q_1} >>> 1;  
             count <= count - 1; 
-            next_state = SHIFT;  
+            next_state <= SHIFT;  
           end 
           else begin
-            next_state = SHIFT;  
+            next_state <= SHIFT;  
           end
         end
 
@@ -47,7 +47,7 @@ module ece593w26_mul(input logic clk, rst,
           if ({q[0], q_1} == 2'b01) begin
             a <= a + w;  
             count <= count - 1;  
-            next_state = SHIFT;  
+            next_state <= SHIFT;  
           end
         end
 
@@ -55,18 +55,18 @@ module ece593w26_mul(input logic clk, rst,
           if ({q[0], q_1} == 2'b10) begin
             a <= a - w; 
             count <= count - 1;
-            next_state = SHIFT; 
+            next_state <= SHIFT; 
           end
         end
 		
         //Default condition 
         default: begin
-          next_state = SHIFT; 
+          next_state <= SHIFT; 
         end
       endcase
     end
   end
 
-  assign f = a;
+	assign f = {a, q};
 
 endmodule
