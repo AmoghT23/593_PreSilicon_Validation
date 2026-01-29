@@ -1,0 +1,154 @@
+# =================================================================================
+# === Instance: /code_cov_tb/dut
+# === Design Unit: work.code_cov
+# =================================================================================
+# Branch Coverage:
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Branches                         8         8         0   100.00%
+# 
+# ================================Branch Details================================
+# 
+# Branch Coverage for instance /code_cov_tb/dut
+# 
+#     Line         Item                      Count     Source 
+#     ----         ----                      -----     ------ 
+#   File code_cov.sv
+# ------------------------------------IF Branch------------------------------------
+#     12                                        71     Count coming in to IF
+#     12              1                          4     
+#     14              1                         67     
+# Branch totals: 2 hits of 2 branches = 100.00%
+# 
+# ------------------------------------CASE Branch------------------------------------
+#     22                                       133     Count coming in to CASE
+#     23              1                         55     
+#     27              1                         54     
+#     34              1                         22     
+#     38              1                          2     
+# Branch totals: 4 hits of 4 branches = 100.00%
+# 
+# ------------------------------------IF Branch------------------------------------
+#     29                                        54     Count coming in to IF
+#     29              1                         32     
+#     31              1                         22     
+# Branch totals: 2 hits of 2 branches = 100.00%
+# 
+# 
+# Expression Coverage:
+#     Enabled Coverage              Bins   Covered    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Expressions                      6         6         0   100.00%
+# 
+# ================================Expression Details================================
+# 
+# Expression Coverage for instance /code_cov_tb/dut --
+# 
+#   File code_cov.sv
+# ----------------Focused Expression View-----------------
+# Line       24 Item    1  (A && B)
+# Expression totals: 2 of 2 input terms covered = 100.00%
+# 
+# ----------------Focused Expression View-----------------
+# Line       28 Item    1  (C || P)
+# Expression totals: 2 of 2 input terms covered = 100.00%
+# 
+# ----------------Focused Expression View-----------------
+# Line       35 Item    1  (Q ~& R)
+# Expression totals: 2 of 2 input terms covered = 100.00%
+# 
+# 
+# FSM Coverage:
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     FSM States                       3         3         0   100.00%
+#     FSM Transitions                  4         4         0   100.00%
+# 
+# ================================FSM Details================================
+# 
+# FSM Coverage for instance /code_cov_tb/dut --
+# 
+# FSM_ID: current_state
+#     Current State Object : current_state
+#     ----------------------
+#     State Value MapInfo :
+#     ---------------------
+# Line          State Name               Value
+# ----          ----------               -----
+#   23                 AND                   0
+#   27                  OR                   1
+#   34                NAND                   2
+#     Covered States :
+#     ----------------
+#                    State           Hit_count
+#                    -----           ---------
+#                      AND                  31          
+#                       OR                  28          
+#                     NAND                  12          
+#     Covered Transitions :
+#     ---------------------
+# Line            Trans_ID           Hit_count          Transition          
+# ----            --------           ---------          ----------          
+#   25                   0                  28          AND -> OR                     
+#   32                   1                  12          OR -> NAND                    
+#   30                   2                  16          OR -> AND                     
+#   36                   3                  11          NAND -> AND                   
+# 
+# 
+#     Summary                       Bins      Hits    Misses  Coverage
+#     -------                       ----      ----    ------  --------
+#         FSM States                   3         3         0   100.00%
+#         FSM Transitions              4         4         0   100.00%
+# Statement Coverage:
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Statements                      16        16         0   100.00%
+# 
+# ================================Statement Details================================
+# 
+# Statement Coverage for instance /code_cov_tb/dut --
+# 
+#     Line         Item                      Count     Source 
+#     ----         ----                      -----     ------ 
+#   File code_cov.sv
+#     11              1                         71     
+#     13              1                          4     
+#     15              1                         67     
+#     18              1                        133     
+#     19              1                        133     
+#     19              2                        133     
+#     19              3                        133     
+#     20              1                        133     
+#     24              1                         55     
+#     25              1                         55     
+#     28              1                         54     
+#     30              1                         32     
+#     32              1                         22     
+#     35              1                         22     
+#     36              1                         22     
+#     38              1                          2     
+# Toggle Coverage:
+#     Enabled Coverage              Bins      Hits    Misses  Coverage
+#     ----------------              ----      ----    ------  --------
+#     Toggles                         28        28         0   100.00%
+# 
+# ================================Toggle Details================================
+# 
+# Toggle Coverage for instance /code_cov_tb/dut --
+# 
+#                                               Node      1H->0L      0L->1H                          "Coverage"
+#                                               ---------------------------------------------------------------
+# 
+# Total Node Count     =         17 
+# Toggled Node Count   =         17 
+# Untoggled Node Count =          0 
+# 
+# Toggle Coverage      =     100.00% (28 of 28 bins)
+# 
+# 
+# Total Coverage By Instance (filtered view): 100.00%
+# 
+# 
+quit -sim
+# End time: 13:01:05 on Jan 29,2026, Elapsed time: 0:00:42
+# Errors: 0, Warnings: 2
